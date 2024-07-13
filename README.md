@@ -11,5 +11,3 @@ To fill gaps in the MPD, we supplemented missing columns using the Spotify API. 
 •	artists: artist_uri, artist_popularity, artist_genre
 •	audio_features: danceability, energy, key, loudness, mode, speechiness, acousticness, instrumentalness, liveness, valence, tempo, id, duration_ms, explicit
 Some of the challenges in this stage were API rate limits, unclear column names, and Spotify authentication flows. Spotify's API rate limit is calculated based on the number of calls that your app makes to Spotify in a rolling 30 second window. We ran into Spotify API rate limits multiple times and were not able to obtain the full data in the MPD due to this as we did not have enough time. Only roughly a third of the MPD dataset is used. As data returned by the API were without column names, we had to manually check columns which was mildly annoying. Spotify API credential flows were quite confusing, as there is authentication code flow, client credentials flow, and Spotify OAuth. Client credentials flow was utilized for its simplicity.
-
-Dataset Sources and Preprocessing
